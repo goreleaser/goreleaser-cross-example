@@ -1,0 +1,3 @@
+[submodule "sysroot"]
+	path = sysroot
+	url = git@github.com:troian/golang-cross-example-sysroot.git
