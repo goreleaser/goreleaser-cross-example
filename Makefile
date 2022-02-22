@@ -1,5 +1,5 @@
-PACKAGE_NAME          := github.com/troian/golang-cross-example
-GOLANG_CROSS_VERSION  ?= v1.15.2
+PACKAGE_NAME          := github.com/goreleaser/goreleaser-cross-example
+GOLANG_CROSS_VERSION  ?= v1.17.6
 
 SYSROOT_DIR     ?= sysroots
 SYSROOT_ARCHIVE ?= sysroots.tar.bz2
@@ -22,7 +22,7 @@ release-dry-run:
 		-v `pwd`:/go/src/$(PACKAGE_NAME) \
 		-v `pwd`/sysroot:/sysroot \
 		-w /go/src/$(PACKAGE_NAME) \
-		troian/golang-cross:${GOLANG_CROSS_VERSION} \
+		goreleaser/goreleaser-cross:${GOLANG_CROSS_VERSION} \
 		--rm-dist --skip-validate --skip-publish
 
 .PHONY: release
@@ -40,5 +40,5 @@ release:
 		-v `pwd`:/go/src/$(PACKAGE_NAME) \
 		-v `pwd`/sysroot:/sysroot \
 		-w /go/src/$(PACKAGE_NAME) \
-		troian/golang-cross:${GOLANG_CROSS_VERSION} \
+		goreleaser/goreleaser-cross:${GOLANG_CROSS_VERSION} \
 		release --rm-dist

@@ -56,7 +56,7 @@ changelog:
 
 release:
   github:
-    owner: troian
+    owner: goreleaser
     name: golang-cross-example
   prerelease: auto
   draft: false

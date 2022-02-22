@@ -1,5 +1,5 @@
 # Brief
-Usage of [golang-cross](https://github.com/troian/golang-cross)
+Usage example for [goreleaser-cross](https://github.com/goreleaser/goreleaser-cross)
 
 ## Whats inside
 Demonstrate how to cross-compile Go project with CGO dependencies
@@ -29,6 +29,6 @@ This example is based on real working solution where Macbook is dev machine and 
 Cross-compilation is set for both darwin and linux to ensure nothing is broken with new commits
  
 ## Sysroot
-Sysroots are located in [separate repo](https://github.com/troian/golang-cross-example-sysroot) and added as submodule to current repo 
+Sysroots are located in [separate repo](https://github.com/goreleaser/goreleaser-cross-example-sysroot) and added as submodule to current repo 
 **Darwin** sysroot is created by simply copying libraries from `homebrew`
-**Linux** sysroot is created from RPI4 using [this script](https://github.com/troian/golang-cross/blob/master/scripts/sysroot-rsync.sh)
+**Linux** sysroot is created from RPI4 using [this script](https://github.com/goreleaser/goreleaser-cross/blob/master/scripts/sysroot-rsync.sh)
