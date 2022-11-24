@@ -16,7 +16,6 @@ sysroot-unpack:
 release-dry-run:
 	@docker run \
 		--rm \
-		--privileged \
 		-e CGO_ENABLED=1 \
 		-v /var/run/docker.sock:/var/run/docker.sock \
 		-v `pwd`:/go/src/$(PACKAGE_NAME) \
@@ -33,7 +32,6 @@ release:
 	fi
 	docker run \
 		--rm \
-		--privileged \
 		-e CGO_ENABLED=1 \
 		--env-file .release-env \
 		-v /var/run/docker.sock:/var/run/docker.sock \
